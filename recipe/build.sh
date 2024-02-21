@@ -3,6 +3,8 @@
 if test "$CONDA_BUILD_CROSS_COMPILATION" = "1"
 then
   CMAKE_ARGS="${CMAKE_ARGS} -DQT_HOST_PATH=${BUILD_PREFIX}"
+else
+  CMAKE_ARGS="${CMAKE_ARGS} -DQT_HOST_PATH=${PREFIX}"
 fi
 
 cmake --log-level=DEBUG -LAH -G "Ninja" ${CMAKE_ARGS} \
