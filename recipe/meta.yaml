@@ -9,7 +9,7 @@ source:
   md5: d8c01d232b6125126f820b3e658a20f2
 
 build:
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
   run_exports:
     - {{ pin_subpackage('qt6-graphs', max_pin='x.x') }}
@@ -23,28 +23,14 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - qt6-main {{ version }}  # [build_platform != target_platform]
-    - {{ cdt('mesa-libgl-devel') }}      # [linux]
-    - {{ cdt('mesa-libegl-devel') }}     # [linux]
-    - {{ cdt('mesa-dri-drivers') }}      # [linux]
-    - {{ cdt('libdrm-devel') }}          # [linux]
-    - {{ cdt('libglvnd-glx') }}          # [linux]
-    - {{ cdt('libglvnd-egl') }}          # [linux]
   host:
+    - libgl-devel                        # [linux]
+    - libegl-devel                       # [linux]
+    - libopengl-devel                    # [linux]
     - qt6-main {{ version }}
     - qt6-quick3d
 
 test:
-  requires:
-    - {{ cdt('mesa-libgl-devel') }}      # [linux]
-    - {{ cdt('mesa-libegl-devel') }}     # [linux]
-    - {{ cdt('mesa-dri-drivers') }}      # [linux]
-    - {{ cdt('libdrm-devel') }}          # [linux]
-    - {{ cdt('libglvnd-glx') }}          # [linux]
-    - {{ cdt('libglvnd-egl') }}          # [linux]
-    - cmake
-    - ninja
-  source_files:
-    - examples/
   commands:
     {% set qt_libs = ["Graphs"] %}
     {% for each_qt_lib in qt_libs %}
