@@ -1,4 +1,4 @@
-{% set version = "6.7.2" %}
+{% set version = "6.7.3" %}
 
 package:
   name: qt6-graphs
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://download.qt.io/official_releases/qt/{{ version.rpartition('.')[0] }}/{{ version }}/submodules/qtgraphs-everywhere-src-{{ version }}.tar.xz
-  md5: d8c01d232b6125126f820b3e658a20f2
+  md5: 2bf2e934399e446fb0d0a62011f9cdf9
 
 build:
-  number: 1
+  number: 0
   detect_binary_files_with_prefix: true
   run_exports:
     - {{ pin_subpackage('qt6-graphs', max_pin='x.x') }}
