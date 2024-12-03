@@ -7,9 +7,6 @@ package:
 source:
   url: https://download.qt.io/official_releases/qt/{{ version.rpartition('.')[0] }}/{{ version }}/submodules/qtgraphs-everywhere-src-{{ version }}.tar.xz
   md5: 9c794ef2f75ae80b329c44fefd14a7ec
-  patches:
-    # https://bugreports.qt.io/browse/QTBUG-131796
-    - putils.patch
 
 build:
   number: 0
