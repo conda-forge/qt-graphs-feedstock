@@ -1,0 +1,12 @@
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index e35854fc..18723139 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -361,6 +361,7 @@ add_subdirectory(common)
+ qt_internal_extend_target(Graphs
+     INCLUDE_DIRECTORIES
+         common
++	graphs3d/utils
+ )
+ 
+ if(QT_FEATURE_graphs_3d)
