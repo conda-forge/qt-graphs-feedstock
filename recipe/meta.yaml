@@ -30,8 +30,10 @@ requirements:
     - libgl-devel                        # [linux]
     - libegl-devel                       # [linux]
     - libopengl-devel                    # [linux]
+    - libvulkan-headers                  # [not osx]
+    - libvulkan-loader                   # [not osx]
     - qt6-main {{ version }}
-    - qt6-quick3d
+    - qt6-quick3d {{ version }}
 
 test:
   commands:
