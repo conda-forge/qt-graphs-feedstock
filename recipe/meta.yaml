@@ -8,6 +8,7 @@ source:
   url: https://download.qt.io/official_releases/qt/{{ version.rpartition('.')[0] }}/{{ version }}/submodules/qtgraphs-everywhere-src-{{ version }}.tar.xz
   md5: c9c6230c2fffe1456ea497e1a9e230bb
 
+
 build:
   number: 0
   detect_binary_files_with_prefix: true
