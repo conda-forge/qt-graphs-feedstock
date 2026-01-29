@@ -1,4 +1,4 @@
-{% set version = "6.10.1" %}
+{% set version = "6.10.2" %}
 
 package:
   name: qt6-graphs
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://download.qt.io/official_releases/qt/{{ version.rpartition('.')[0] }}/{{ version }}/submodules/qtgraphs-everywhere-src-{{ version }}.tar.xz
-  md5: 854b155ae7d854462e9fcff35ad154ad
+  md5: b8ac2537e55640e94b8ba84e15551a3e
 
 
 build:
